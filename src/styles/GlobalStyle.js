@@ -34,6 +34,18 @@ const GlobalStyle = createGlobalStyle`
     display: inline-block;
     border-bottom: 3px solid #FF026C;
    }
+   
+   @media (max-width: 768px){
+    h1{
+     font-size: 3.5rem;
+    }
+    h2{
+     font-size: 2.5rem;
+    }
+    h3{
+     font-size: 1.5rem;
+    }
+   }
   `;
 
 export default GlobalStyle;

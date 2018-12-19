@@ -11,6 +11,9 @@ const HeroContainer = styled.section`
 `;
 const HeroInner = styled.div`
 width: 75%;
+@media (max-width: 768px){
+ width: 100%;
+}
 `;
 
 // class Hero extends Component {
