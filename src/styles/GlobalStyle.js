@@ -34,6 +34,13 @@ const GlobalStyle = createGlobalStyle`
     display: inline-block;
     border-bottom: 3px solid #FF026C;
    }
+   .mb-0{
+    margin-bottom: 0;
+   }
+   
+   .text-center{
+    text-align: center;
+   }
    
    @media (max-width: 768px){
     h1{

@@ -5,9 +5,10 @@ import GlobalStyle from '../styles/GlobalStyle';
 
 export default ({ children }) => (
   <div>
-   <div className={"container"}>
-    <GlobalStyle />
-    {children}
-   </div>
+   <GlobalStyle />
+   {children}
+   {/*<div className={"container"}>*/}
+
+   {/*</div>*/}
   </div>
 )
