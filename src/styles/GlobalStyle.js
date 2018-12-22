@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
    .highlight,
     strong{
     display: inline-block;
-    border-bottom: 3px solid #FF026C;
+    border-bottom: 4px solid #FF026C;
    }
    .mb-0{
     margin-bottom: 0;

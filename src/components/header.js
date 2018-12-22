@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import styled from 'styled-components';
+import Icon from "./icon";
 
 const HeaderContainer = styled.header`
  position: fixed;
@@ -12,12 +13,12 @@ const HeaderIcon = styled.div`
  display: inline-block;
  width: 50px;
  height: 50px;
- border: 3px solid #FF026C;
+ background: #FF026C;
  &:before{
   content: "ja";
   font-weight: bold;
   font-size: 1rem;
-  color: #fff;
+  color: #282828;
   font-family: sans-serif;
   text-align: center;
   display: block;
@@ -29,8 +30,7 @@ class Header extends Component {
  render(){
    return (
      <HeaderContainer className={"block"}>
-      <HeaderIcon>
-      </HeaderIcon>
+      <Icon/>
      </HeaderContainer>
    )
  }

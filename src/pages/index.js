@@ -5,8 +5,8 @@ import Hero from "../components/hero";
 import Footer from "../components/footer";
 import { graphql } from "gatsby";
 
-export default ({data}) => (
-  <Layout>
+export default ({data, children}) => (
+  <Layout children={children}>
    <div className={"container"}>
     <Header />
     <Hero data={data.hero.edges} class={"container"}/>
