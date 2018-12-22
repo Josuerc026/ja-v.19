@@ -11,40 +11,32 @@ const outerAnimate = keyframes`
  }
 `;
 
-const animate = keyframes`
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+const textAnimate = keyframes`
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
   }
-  10% {
-    -webkit-transform: scale(0.91);
-            transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+  40% {
+    opacity: 0.6;
   }
-  17% {
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  33% {
-    -webkit-transform: scale(0.87);
-            transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  45% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+  100% {
+    opacity: 1;
   }
 `;
+
+const iconAnimate = keyframes`
+ 0% {
+    opacity: 0;
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  100% {
+     opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+`;
+
 
 const LoaderContainer = styled.div`
  position: fixed;
@@ -58,20 +50,28 @@ const LoaderContainer = styled.div`
  align-items: center;
  justify-content: center;
  animation: ${outerAnimate} 0.75s linear;
- animation-delay: 2.3s;
+ animation-delay: 2s;
 `;
 
 const LoaderInner = styled.div`
  padding: 10px;
- animation: ${animate} 1.5s ease-in-out infinite both;
  
- div{
-  width: 100px;
-  height: 100px;
+ > div{
+  animation: ${iconAnimate} 0.65s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  width: 75px;
+  height: 75px;
   &:before{
-   font-size: 2rem;
+   font-size: 1.5rem;
   }
  }
+`;
+
+const Text = styled.h1`
+ animation: ${textAnimate} 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+ transform-style: preserve-3d;
+ animation-delay: 0.85s;
 `;
 
 
@@ -91,9 +91,10 @@ class Loader extends Component{
  render() {
   return (
     <LoaderContainer className={"animate"}>
-     <LoaderInner>
+     <LoaderInner className={"text-center"}>
       <Icon/>
      </LoaderInner>
+     <Text className={"mb-0"}>hi there.</Text>
     </LoaderContainer>
   )
  }

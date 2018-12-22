@@ -34,6 +34,9 @@ const GlobalStyle = createGlobalStyle`
     display: inline-block;
     border-bottom: 4px solid #FF026C;
    }
+   .mt-3{
+    margin-top: 10px;
+   }
    .mb-0{
     margin-bottom: 0;
    }
