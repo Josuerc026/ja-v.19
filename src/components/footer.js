@@ -15,7 +15,7 @@ export default () => (
   <Footer>
    <InnerFooter  className={"container block"}>
     <Social gitHub={"https://github.com/Josuerc026"}/>
-    <p className={"mb-0 text-center"}>Built & Designed by Josue Arce</p>
+    <small className={"mb-0 text-center d-block"}>Built & Designed by Josue Arce</small>
    </InnerFooter >
   </Footer>
 )

@@ -3,6 +3,12 @@ import Github from "./icons/github";
 import styled from "styled-components";
 
 const Social = styled.div`
+ @media (max-width: 480px){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+ }
  @media (min-width: 768px){
   position: fixed;
   bottom: 0;

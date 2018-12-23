@@ -33,8 +33,10 @@ width: 75%;
 export default ({ data }) => (
   <HeroContainer className={"block"}>
    <HeroInner>
-    <h1>{data[0].node.frontmatter.intro}<br/>I'm {data[0].node.frontmatter.name}</h1>
-    <h3 dangerouslySetInnerHTML={{__html:data[0].node.html}}></h3>
+    {/*{data[0].node.frontmatter.intro}*/}
+    <h1>{data[0].node.frontmatter.name}</h1>
+    <h2 dangerouslySetInnerHTML={{__html:data[0].node.frontmatter.intro}}></h2>
+    <p dangerouslySetInnerHTML={{__html:data[0].node.html}}></p>
     <Button url={data[0].node.frontmatter.url} title={data[0].node.frontmatter.contactText} />
    </HeroInner>
   </HeroContainer>

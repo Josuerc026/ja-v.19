@@ -1,8 +1,8 @@
 ---
-intro: 'hello there,'
 name: 'josue arce'
+intro: Building with <strong>accessibility</strong> in mind.
 contactText: 'contact me'
 url: 'mailto:josuerc026@gmail.com'
 ---
 
-Building the web with **accessibility** in mind.
+I'm a web developer specializing in website & application development with a clear focus on producing inclusive experiences for all.

@@ -20,6 +20,7 @@ const textAnimate = keyframes`
     opacity: 0.6;
   }
   100% {
+   letter-spacing: -0.05em;
     opacity: 1;
   }
 `;
@@ -44,7 +45,7 @@ const LoaderContainer = styled.div`
  height: 100%;
  top: 0;
  left: 0;
- background: #282828;
+ background: #212121;
  z-index: 999;
  display: flex;
  align-items: center;

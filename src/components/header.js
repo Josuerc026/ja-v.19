@@ -6,7 +6,6 @@ const HeaderContainer = styled.header`
  position: fixed;
  width: 100%;
  left: 0;
- 
 `;
 
 const HeaderIcon = styled.div`
