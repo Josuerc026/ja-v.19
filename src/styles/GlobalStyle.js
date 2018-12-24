@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
    p{
     font-size: 1.2rem;
    }
-   p,small,span{
+   p,small,span, ul li, li{
     color: #bdbdbd;
    }
    .block{
@@ -46,6 +46,9 @@ const GlobalStyle = createGlobalStyle`
     strong{
     display: inline-block;
     border-bottom: 4px solid #FF026C;
+   }
+   .w-100{
+    width: 100%;
    }
    .mt-3{
     margin-top: 10px;
@@ -68,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
      font-size: 3.5rem;
     }
     h2{
-     font-size: 2.5rem;
+     font-size: 2.25rem;
     }
     h3{
      font-size: 1.5rem;

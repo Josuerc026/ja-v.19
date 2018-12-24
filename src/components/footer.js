@@ -13,8 +13,8 @@ const InnerFooter = styled.div`
 
 export default () => (
   <Footer>
-   <InnerFooter  className={"container block"}>
-    <Social gitHub={"https://github.com/Josuerc026"}/>
+   <InnerFooter className={"container block"}>
+    <Social gitHub={"https://github.com/Josuerc026"} linkedIn={"https://www.linkedin.com/in/josue-arce-8b147b108/"} />
     <small className={"mb-0 text-center d-block"}>Built & Designed by Josue Arce</small>
    </InnerFooter >
   </Footer>

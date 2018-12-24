@@ -1,9 +1,10 @@
 import React from "react";
 import Github from "./icons/github";
+import Linkedin from "./icons/linkedin";
 import styled from "styled-components";
 
 const Social = styled.div`
- @media (max-width: 480px){
+ @media (max-width: 768px){
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,12 +30,14 @@ const Social = styled.div`
   width: 25px;
   height: 25px;
   display: block;
-  margin-top: 15px;
+  margin: 15px 10px 0 10px;
+  
  }
 `;
 
 export default props => (
  <Social>
   <a href={props.gitHub}><Github/></a>
+  <a href={props.linkedIn}><Linkedin/></a>
  </Social>
 )
