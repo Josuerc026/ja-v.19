@@ -32,11 +32,14 @@ const GlobalStyle = createGlobalStyle`
    p{
     font-size: 1.2rem;
    }
-   p,small,span, ul li, li{
+   p,small,span, ul li, li, code{
     color: #bdbdbd;
    }
    .block{
     padding: 30px;
+   }
+   .container .block{
+    padding-bottom: 30%;
    }
    .container{
     max-width: 960px;

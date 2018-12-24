@@ -2,15 +2,18 @@ import React, { Component } from "react";
 import ScrollReveal from "scrollreveal";
 import styled from "styled-components";
 
-const ProjectContainer = styled.div`
+const ProjectContainer = styled.section`
  position: relative;
- display: flex;
- flex-wrap: wrap;
 `;
 
 const Title = styled.h2`
  width: 100%;
  margin-bottom: 30px;
+`;
+
+const ProjectGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const ProjectItem = styled.div`
@@ -35,8 +38,8 @@ const ProjectItem = styled.div`
  ul li{
   width: 33.33%;
   font-weight: bold;
+  font-size: 1rem;
  }
- 
  &:before{
    content: '';
    background: #ff006a;
@@ -67,17 +70,19 @@ class Projects extends Component{
   return (
     <ProjectContainer className={"block project-container"}>
      <Title>What i've worked on.</Title>
-     {
-      projects.map(item => {
-       return (<ProjectItem>
-        <h4>{item.name}</h4>
-        <p>{item.description}</p>
-        <ul>
-         {item.tech.map(item => <li><span>{item}</span></li>)}
-        </ul>
-       </ProjectItem>)
-      })
-     }
+     <ProjectGrid>
+      {
+       projects.map(item => {
+        return (<ProjectItem>
+         <h4>{item.name}</h4>
+         <p>{item.description}</p>
+         <ul>
+          {item.tech.map(item => <li><span>{item}</span></li>)}
+         </ul>
+        </ProjectItem>)
+       })
+      }
+     </ProjectGrid>
     </ProjectContainer>
   )
  }

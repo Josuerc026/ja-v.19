@@ -7,6 +7,7 @@ const HeroContainer = styled.section`
  display: flex;
  align-items: center;
  justify-content: left;
+ padding: 30px;
  height: 100vh;
 `;
 const HeroInner = styled.div`
@@ -31,7 +32,7 @@ width: 75%;
 // }
 
 export default ({ data }) => (
-  <HeroContainer className={"block"}>
+  <HeroContainer>
    <HeroInner>
     {/*{data[0].node.frontmatter.intro}*/}
     <h1>{data[0].node.frontmatter.name}</h1>

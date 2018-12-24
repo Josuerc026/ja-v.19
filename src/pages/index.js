@@ -3,14 +3,18 @@ import Layout from "../components/layout";
 import Header from "../components/header";
 import Hero from "../components/hero";
 import Projects from "../components/projects";
+import Jobs from "../components/jobs";
+import About from "../components/about";
 import Footer from "../components/footer";
 import { graphql } from "gatsby";
 
 export default ({data, children}) => (
   <Layout children={children}>
+   <Header />
    <div className={"container"}>
-    <Header />
     <Hero data={data.hero.edges} class={"container"}/>
+    <About/>
+    <Jobs data={data.jobs.edges}/>
     <Projects data={data.projects.edges}/>
    </div>
     <Footer />
@@ -41,6 +45,19 @@ export const query = graphql`
         	url
           description
           tech
+        }
+      }
+    }
+  }
+  jobs: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/jobs/" } }, sort: { fields: [frontmatter___start], order: DESC }) {
+    edges {
+      node {
+        frontmatter {
+          name
+          start
+          end
+        	title
+          duties
         }
       }
     }
