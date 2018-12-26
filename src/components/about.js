@@ -8,12 +8,6 @@ const AboutContainer = styled.section`
  display: flex;
  flex-wrap: wrap;
  
- @media (min-width: 768px){
-  > div{
-   width: 50%;
-  }
- }
- 
 `;
 
 const Title = styled.h2`
@@ -25,6 +19,9 @@ const Title = styled.h2`
 const IntroContainer = styled.div`
  position: relative;
  padding: 15px 30px 15px 0;
+ @media (min-width: 768px){
+  width: 60%;
+ }
 `;
 
 const SkillsContainer = styled.div`
@@ -37,6 +34,10 @@ const SkillsContainer = styled.div`
  border-right: 1px solid #ff006a;
  border-bottom: 1px solid #ff006a;
  padding: 35px 15px 15px 15px;
+ 
+ @media (min-width: 768px){
+  width: 40%;
+ }
  
  &:before{
   content: '';
@@ -70,7 +71,7 @@ class About extends Component{
      A bit about me.
     </Title>
     <IntroContainer>
-     <p>I began my web development career in the mid 2010s and have fallen in 💓 with flexibility and robustness of the platform.</p>
+     <p>I began my web development career in the mid 2010s and have fallen in 💓 with flexibility and robustness of the platform. Since then, I've worked with a wide variety of organizations ranging from non-profits to government agencies.</p>
      <p>I create intuitive and inclusive web experiences by focusing on accessibility ♿ and meeting the latest WCAG 2.0 standards.</p>
      <p>If i'm not on the computer, you can usually find me playing video games and/or playing around with Sir Charles, my cat 🐈.</p>
     </IntroContainer>
@@ -83,7 +84,7 @@ class About extends Component{
         <li><code>> JavaScript (ES6)</code></li>
         <li><code>> PHP</code></li>
         <li><code>> CSS / SCSS</code></li>
-        <li><code>> HTML 5 </code></li>
+        <li><code>> HTML5 </code></li>
        </ul>
        <code>Frameworks: </code>
        <ul>

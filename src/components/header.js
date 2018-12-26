@@ -6,7 +6,7 @@ const HeaderContainer = styled.header`
  position: fixed;
  width: 100%;
  left: 0;
- top: ${props => (props.adjust === 'down' ? '-100%' : '0') };
+ top: ${props => (props.adjust === 'down' && props.lastScroll > 10 ? '-100%' : '0') };
  background: ${props => (props.adjust === 'up' && props.lastScroll !== 0 ?  'rgba(33, 33, 33,0.85)' : 'none' ) };
  transition: 0.4s all ease-in-out;
  padding: 15px 30px;
