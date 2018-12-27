@@ -26,7 +26,7 @@ const ProjectItem = styled.div`
  transition: 0.25s all;
  
  @media (min-width: 768px){
-  flex: 1;
+  width: 31%;
  }
  
  ul{

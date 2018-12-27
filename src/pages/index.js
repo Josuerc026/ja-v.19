@@ -13,7 +13,7 @@ export default ({data, children}) => (
    <Header />
    <div className={"container"}>
     <Hero data={data.hero.edges} class={"container"}/>
-    <About/>
+    <About data={data.about.edges}/>
     <Jobs data={data.jobs.edges}/>
     <Projects data={data.projects.edges}/>
    </div>
@@ -59,6 +59,18 @@ export const query = graphql`
         	title
           duties
         }
+      }
+    }
+  }
+  about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
+    edges {
+      node {
+        frontmatter {
+          languages
+          frameworks
+          tools
+        }
+        html
       }
     }
   }

@@ -18,9 +18,9 @@ const Title = styled.h2`
 
 const IntroContainer = styled.div`
  position: relative;
- padding: 15px 30px 15px 0;
+ padding: 15px 15px 15px 0;
  @media (min-width: 768px){
-  width: 60%;
+  width: 100%;
  }
 `;
 
@@ -36,7 +36,7 @@ const SkillsContainer = styled.div`
  padding: 35px 15px 15px 15px;
  
  @media (min-width: 768px){
-  width: 40%;
+  width: 100%;
  }
  
  &:before{
@@ -56,6 +56,20 @@ const SkillsContainer = styled.div`
   padding: 0;
   list-style-type: none;
  }
+ 
+ .skill-items{
+  display: flex;
+  flex-wrap: wrap;
+ }
+`;
+
+const SkillItem = styled.div`
+@media (min-width: 768px){
+ flex: 1;
+}
+@media (max-width: 768px){
+ width: 100%;
+}
 `;
 
 class About extends Component{
@@ -65,35 +79,29 @@ class About extends Component{
   })
  }
  render(){
+  const content = this.props.data[0].node.html;
+  const skills = this.props.data[0].node.frontmatter;
   return(
    <AboutContainer className={"block about-container"}>
     <Title>
      A bit about me.
     </Title>
-    <IntroContainer>
-     <p>I began my web development career in the mid 2010s and have fallen in 💓 with flexibility and robustness of the platform. Since then, I've worked with a wide variety of organizations ranging from non-profits to government agencies.</p>
-     <p>I create intuitive and inclusive web experiences by focusing on accessibility ♿ and meeting the latest WCAG 2.0 standards.</p>
-     <p>If i'm not on the computer, you can usually find me playing video games and/or playing around with Sir Charles, my cat 🐈.</p>
+    <IntroContainer dangerouslySetInnerHTML={{__html: content}}>
     </IntroContainer>
     <SkillsContainer>
      <code>Skills: </code>
      <ul>
-      <li>
-       <code>Languages: </code>
-       <ul>
-        <li><code>> JavaScript (ES6)</code></li>
-        <li><code>> PHP</code></li>
-        <li><code>> CSS / SCSS</code></li>
-        <li><code>> HTML5 </code></li>
-       </ul>
-       <code>Frameworks: </code>
-       <ul>
-        <li><code>> Vue</code></li>
-        <li><code>> Node.js </code></li>
-        <li><code>> React</code></li>
-        <li><code>> Gatsby</code></li>
-        <li><code>> WordPress</code></li>
-       </ul>
+      <li className={"skill-items"}>
+       {
+        Object.keys(skills).map(key => {
+           return (
+             <SkillItem>
+              <code>{key}:</code>
+              <ul>{ skills[key].map(skill => (<li><code> > {skill}</code></li>)) }</ul>
+             </SkillItem>
+           )
+        })
+       }
       </li>
      </ul>
     </SkillsContainer>
