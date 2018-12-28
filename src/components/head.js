@@ -1,12 +1,12 @@
 import React from 'react';
 import Helmet from "react-helmet";
-import { withPrefix } from 'gatsby'
-import OgImage from '../../static/favicons/og-image.jpg';
-import AppleTouch from "../../static/favicons/apple-touch-icon.png";
-import SafariPinned from "../../static/favicons/safari-pinned-tab.svg";
-import Fav32 from "../../static/favicons/favicon-32x32.png";
-import Fav16 from "../../static/favicons/favicon-16x16.png";
-import Favico from "../../static/favicons/favicon.ico";
+import { withPrefix } from "gatsby";
+import OgImage from '../../static/og-image.jpg';
+import AppleTouch from "../../static/apple-touch-icon.png";
+import SafariPinned from "../../static/safari-pinned-tab.svg";
+import Fav32 from "../../static/favicon-32x32.png";
+import Fav16 from "../../static/favicon-16x16.png";
+import Favico from "../../static/favicon.ico";
 
 const Head = () => (
   <Helmet>
