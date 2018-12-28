@@ -1,4 +1,5 @@
 module.exports = {
+ pathPrefix: "/favicons",
  siteMetadata: {
   title: "Josue Arce"
  },
