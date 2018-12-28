@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Loader from "./loader";
+import Head from "./head";
 import styled, {keyframes} from "styled-components";
 import GlobalStyle from '../styles/GlobalStyle';
 
@@ -27,6 +28,7 @@ class Layout extends Component {
   return (
     <div>
      <GlobalStyle />
+     <Head/>
      { this.state.isLoading ?
        (<Loader doneLoading={this.doneLoading}/>) :
        (<ChildrenContainer className={"animate"}>{children}</ChildrenContainer>)

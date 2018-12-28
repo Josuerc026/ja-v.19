@@ -2,9 +2,10 @@ module.exports = {
  siteMetadata: {
   title: "Josue Arce"
  },
- plugins: [
+ plugins: [fbfv
    'gatsby-plugin-typography',
    'gatsby-plugin-styled-components',
+   'gatsby-plugin-react-helmet',
    `gatsby-transformer-remark`,
    {
     resolve: `gatsby-source-filesystem`,
