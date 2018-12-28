@@ -1,12 +1,12 @@
 import React from 'react';
 import Helmet from "react-helmet";
 import { withPrefix } from "gatsby";
-import OgImage from '../../static/og-image.jpg';
-import AppleTouch from "../../static/apple-touch-icon.png";
-import SafariPinned from "../../static/safari-pinned-tab.svg";
-import Fav32 from "../../static/favicon-32x32.png";
-import Fav16 from "../../static/favicon-16x16.png";
-import Favico from "../../static/favicon.ico";
+import OgImage from '../../static/favicons/og-image.jpg';
+import AppleTouch from "../../static/favicons/apple-touch-icon.png";
+import SafariPinned from "../../static/favicons/safari-pinned-tab.svg";
+import Fav32 from "../../static/favicons/favicon-32x32.png";
+import Fav16 from "../../static/favicons/favicon-16x16.png";
+import Favico from "../../static/favicons/favicon.ico";
 
 const Head = () => (
   <Helmet>
@@ -23,21 +23,21 @@ const Head = () => (
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://josuearce.com" />
     <meta property="og:site_name" content="Josue Arce | Web Developer" />
-    <meta property="og:image" content={withPrefix('/og-image.jpg')} />
+    <meta property="og:image" content={withPrefix('favicons/og-image.jpg')} />
     <meta property="og:image:width" content="279" />
     <meta property="og:image:height" content="279" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:locale" content="en_US" />
     <meta itemProp="name" content="Josue Arce | Web Developer" />
     <meta itemProp="description" content="D.C. based web developer who specializes in building accessible web experiences for all." />
-    <meta itemProp="image" content={withPrefix('/og-image.jpg')} />
+    <meta itemProp="image" content={withPrefix('favicons/og-image.jpg')} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://josuearce.com" />
     <meta name="twitter:site" content="josuearce_" />
     <meta name="twitter:creator" content="josuearce_" />
     <meta name="twitter:title" content="Josue Arce | Web Developer" />
     <meta name="twitter:description" content="D.C. based web developer who specializes in building accessible web experiences for all." />
-    <meta name="twitter:image" content={withPrefix('/og-image.jpg')} />
+    <meta name="twitter:image" content={withPrefix('favicons/og-image.jpg')} />
     <meta name="twitter:image:alt" content="Josue Arce | Web Developer" />
 
      <link rel="apple-touch-icon" sizes="180x180" href={AppleTouch} />
