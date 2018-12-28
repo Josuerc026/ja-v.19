@@ -1,7 +1,7 @@
 ---
 name: 'LinkVisum Consulting Group / U.S. Department of Agriculture'
-start: '2016-08-01'
-end: '2017-07-01'
+start: '2016/8/1'
+end: '2017/7/1'
 title: 'Jr. Web Developer'
 duties:
 - Administered the U.S. Department of Agriculture’s (USDA) Integrated Acquisition System (IAS) website portal providing users with important up-to-date system information.

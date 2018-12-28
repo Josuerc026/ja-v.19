@@ -37,9 +37,6 @@ class Header extends Component {
      })
 
     }
-
-    console.log(this.state.scrollDirection);
-
    });
  }
 

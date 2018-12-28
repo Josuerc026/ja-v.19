@@ -1,9 +1,9 @@
 ---
 name: 'Axle Informatics / National Institutes of Health'
-start: '2018-09-04'
+start: '2018/9/4'
 end: 'Current'
 title: 'Web Developer'
 duties:
-- Build highly customizable web components using HTML, CSS, and JavaScript for a wide variety of clients on multiple
-- Lead web accessibility initiatives and provide guidance to multiple departments to comply with WCAG 2.1 standards.
+- Translate stakeholder and design team’s UX wireframes and requirements into responsive, interactive feature sets using HTML/CSS, JavaScript and PHP/WordPress as backend CMS.
+- Automated development workflow, using gulp to compile and minify assets (JS, CSS), and integrate Browsersync for rapid browser testing.
 ---

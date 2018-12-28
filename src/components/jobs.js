@@ -70,7 +70,9 @@ class Jobs extends Component{
        jobs.map(job => {
         return (
           <JobItem>
-           <small>{job.start} - {job.end}</small>
+           <small>{new Date(job.start).toLocaleDateString('en-US', {
+            year: 'numeric', month: 'short'})} - <br/> {job.end !== "Current" ? new Date(job.end).toLocaleDateString('en-US', {
+            year: 'numeric', month: 'short'}) : job.end }</small>
            <h4>{job.name}</h4>
            <ul>
             {
