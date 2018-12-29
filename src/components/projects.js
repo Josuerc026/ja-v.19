@@ -16,31 +16,39 @@ const ProjectGrid = styled.div`
   flex-wrap: wrap;
 `;
 
-const ProjectItem = styled.div`
- border: 1px solid gray;
- background: #212121;
+const ProjectItem = styled.div` 
  padding: 15px;
- margin: 10px;
- position: relative;
- box-shadow: 0 5px 8px rgba(0,0,0,0.85);
- transition: 0.25s all;
- 
+ @media (min-width: 992px){
+  width: 33.33%;
+ }
  @media (min-width: 768px){
-  width: 31%;
+  width: 50%;
  }
- 
- ul{
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  margin: 0;
+ @media (max-width: 768px){
+  width: 100%;
  }
- ul li{
+
+ > div{
+  height: 100%;
+  border: 1px solid gray;
+  background: #212121;
+  padding: 15px;
+  position: relative;
+  box-shadow: 0 5px 8px rgba(0,0,0,0.85);
+  transition: 0.25s all;
+  }
+ > div ul{
+   display: flex;
+   flex-wrap: wrap;
+   list-style-type: none;
+   margin: 0;
+ }
+ > div ul li{
   width: 33.33%;
   font-weight: bold;
   font-size: 1rem;
  }
- &:before{
+ > div:before{
    content: '';
    background: #ff006a;
    display: block;
@@ -52,7 +60,7 @@ const ProjectItem = styled.div`
    position: absolute;
  }
  
- &:hover{
+ > div:hover{
   box-shadow: 0 5px 8px rgba(0,0,0,0.4);
  }
 `;
@@ -73,12 +81,15 @@ class Projects extends Component{
      <ProjectGrid>
       {
        projects.map(item => {
-        return (<ProjectItem>
-         <h4>{item.name}</h4>
-         <p>{item.description}</p>
-         <ul>
-          {item.tech.map(item => <li><span>{item}</span></li>)}
-         </ul>
+        return (
+          <ProjectItem>
+           <div>
+             <h4>{item.name}</h4>
+             <p>{item.description}</p>
+             <ul>
+              {item.tech.map(item => <li><span>{item}</span></li>)}
+             </ul>
+           </div>
         </ProjectItem>)
        })
       }

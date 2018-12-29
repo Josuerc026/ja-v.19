@@ -56,6 +56,9 @@ const GlobalStyle = createGlobalStyle`
    .mt-3{
     margin-top: 10px;
    }
+   .mt-5{
+    margin-top: 30px;
+   }
    .mb-3{
     margin-bottom: 10px;
    }

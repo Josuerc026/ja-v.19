@@ -12,6 +12,7 @@ const HeroContainer = styled.section`
 `;
 const HeroInner = styled.div`
 width: 75%;
+ 
 @media (max-width: 768px){
  width: 100%;
 }
@@ -34,8 +35,7 @@ width: 75%;
 export default ({ data }) => (
   <HeroContainer>
    <HeroInner>
-    {/*{data[0].node.frontmatter.intro}*/}
-    <h1>{data[0].node.frontmatter.name}</h1>
+    <h1 className={"mt-5"}>{data[0].node.frontmatter.name}</h1>
     <h2 dangerouslySetInnerHTML={{__html:data[0].node.frontmatter.intro}}></h2>
     <p dangerouslySetInnerHTML={{__html:data[0].node.html}}></p>
     <Button url={data[0].node.frontmatter.url} title={data[0].node.frontmatter.contactText} />

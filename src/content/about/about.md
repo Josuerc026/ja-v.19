@@ -9,17 +9,17 @@ frameworks:
     - Gatsby
     - WordPress
     - React
-    - Angular
     - Node.js
 tools:
     - Git
     - Docker
+    - Web Accessibility/WCAG 2.1
     - Gulp
     - NPM
     - ACF
 ---
 
-I began my web development career in the mid 2010s and have fallen in 💓 with flexibility and robustness of the platform. Since then, I've worked with a wide variety of organizations ranging from non-profits to government agencies.
+I began my web development career in the 2016 and have fallen in 💓 with flexibility and robustness of the platform. Since then, I've worked with a wide variety of organizations ranging from non-profits to government agencies.
 
 I create intuitive and inclusive web experiences by focusing on accessibility ♿ and meeting the latest WCAG 2.0 standards.
 
