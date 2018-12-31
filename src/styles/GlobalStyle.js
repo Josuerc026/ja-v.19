@@ -71,7 +71,18 @@ const GlobalStyle = createGlobalStyle`
    .text-center{
     text-align: center;
    }
-   
+   .screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+   }
    @media (max-width: 768px){
     h1{
      font-size: 3.5rem;

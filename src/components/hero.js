@@ -18,22 +18,8 @@ width: 75%;
 }
 `;
 
-// class Hero extends Component {
-//  render(){
-//   return(
-//     <HeroContainer className={"block"}>
-//      <HeroInner>
-//       <h1>hello there, <br/>I'm josue.</h1>
-//       <h3>I build the web with <span className={"highlight"}>accessibility</span> in mind.</h3>
-//       <Button url={"#"} title={"contact me"} />
-//      </HeroInner>
-//     </HeroContainer>
-//   )
-//  }
-// }
-
 export default ({ data }) => (
-  <HeroContainer>
+  <HeroContainer id={"hero"}>
    <HeroInner>
     <h1 className={"mt-5"}>{data[0].node.frontmatter.name}</h1>
     <h2 dangerouslySetInnerHTML={{__html:data[0].node.frontmatter.intro}}></h2>

@@ -82,7 +82,7 @@ class About extends Component{
   const content = this.props.data[0].node.html;
   const skills = this.props.data[0].node.frontmatter;
   return(
-   <AboutContainer className={"block about-container"}>
+   <AboutContainer id={"about"} className={"block about-container"}>
     <Title>
      A bit about me.
     </Title>

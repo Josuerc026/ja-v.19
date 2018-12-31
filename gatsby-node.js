@@ -7,6 +7,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       test: /scrollreveal/,
       use: loaders.null(),
      },
+     {
+      test: /react-anchor-link-smooth-scroll/,
+      use: loaders.null(),
+     }
     ],
    },
   })

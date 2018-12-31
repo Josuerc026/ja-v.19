@@ -76,7 +76,7 @@ class Projects extends Component{
  render() {
   const projects = this.props.data.map( item => item.node.frontmatter );
   return (
-    <ProjectContainer className={"block project-container"}>
+    <ProjectContainer id={"projects"} className={"block project-container"}>
      <Title>What i've worked on.</Title>
      <ProjectGrid>
       {

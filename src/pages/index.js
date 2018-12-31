@@ -12,7 +12,7 @@ export default ({data, children}) => (
   <Layout children={children}>
    <Header />
    <div className={"container"}>
-    <Hero data={data.hero.edges} class={"container"}/>
+    <Hero data={data.hero.edges}/>
     <About data={data.about.edges}/>
     <Jobs data={data.jobs.edges}/>
     <Projects data={data.projects.edges}/>

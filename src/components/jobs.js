@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ScrollReveal from "scrollreveal";
 import styled from "styled-components";
 
-const JobsContainer = styled.div`
+const JobsContainer = styled.section`
  position: relative;
 `;
 
@@ -63,7 +63,7 @@ class Jobs extends Component{
  render(){
   const jobs = this.props.data.map(item => item.node.frontmatter);
   return (
-    <JobsContainer className={"block jobs-container"}>
+    <JobsContainer id={"jobs"} className={"block jobs-container"}>
      <Title>Where I've worked.</Title>
      <JobsInner>
       {
