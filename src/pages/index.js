@@ -45,8 +45,15 @@ export const query = graphql`
         	url
           description
           tech
+          image {
+            childImageSharp {
+                fluid(maxWidth: 600) {
+                  src
+                }
+            }
+          }
         }
-      }
+      } 
     }
   }
   jobs: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/jobs/" } }, sort: { fields: [frontmatter___start], order: DESC }) {

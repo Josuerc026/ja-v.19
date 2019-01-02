@@ -17,51 +17,74 @@ const ProjectGrid = styled.div`
 `;
 
 const ProjectItem = styled.div` 
- padding: 15px;
- @media (min-width: 992px){
-  width: 33.33%;
- }
- @media (min-width: 768px){
-  width: 50%;
- }
- @media (max-width: 768px){
-  width: 100%;
- }
-
- > div{
-  height: 100%;
-  border: 1px solid gray;
-  background: #212121;
-  padding: 15px;
-  position: relative;
-  box-shadow: 0 5px 8px rgba(0,0,0,0.85);
-  transition: 0.25s all;
-  }
- > div ul{
-   display: flex;
-   flex-wrap: wrap;
-   list-style-type: none;
-   margin: 0;
- }
- > div ul li{
-  width: 33.33%;
-  font-weight: bold;
-  font-size: 1rem;
- }
- > div:before{
-   content: '';
-   background: #ff006a;
-   display: block;
-   z-index: -1;
-   bottom: -10px;
-   right: -5px;
-   width: 100%;
-   height: 100%;
-   position: absolute;
- }
+ width: 100%;
+ min-height: 400px;
+ position: relative;
+ margin: 30px 0;
  
- > div:hover{
-  box-shadow: 0 5px 8px rgba(0,0,0,0.4);
+  .content {
+   border: 1px solid gray;
+   background: #212121;
+   color: #fff;
+   padding: 30px;
+   transition: 0.25s all;
+   
+   h4{
+    a{
+     color: #fff;
+    }
+   }
+   
+   @media (min-width: 768px){
+    position: absolute;
+    z-index: 999;
+    width: 60%;
+    bottom: 0;
+   }
+  }
+  &:nth-child(odd){
+    .content{
+     right: 0;
+    }
+    .bg-image{
+     margin-right: auto;
+     }  
+  }
+  &:nth-child(even){
+   .content{
+    left: 0;
+   }
+   .bg-image{
+    margin-left: auto;
+   }  
+  }
+  .content ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+  }
+  .content ul li{
+   width: 33.33%;
+   font-weight: bold;
+   font-size: 1rem;
+  }
+  .bg-image{
+   height: 350px;
+   position: relative;
+   background: url(${props => ( props.bgImage ? props.bgImage.childImageSharp.fluid.src : '' )}) no-repeat center center / cover;
+   &:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(255,2,108,0.75);
+    
+   }
+   @media (min-width: 768px){
+     width: 75%;
+    } 
  }
 `;
 
@@ -82,9 +105,11 @@ class Projects extends Component{
       {
        projects.map(item => {
         return (
-          <ProjectItem>
-           <div>
-             <h4>{item.name}</h4>
+          <ProjectItem bgImage={item.image}>
+           <div className={"bg-image"}>
+           </div>
+           <div className={"content"}>
+             <h4><a href={item.url}>{item.name}</a></h4>
              <p>{item.description}</p>
              <ul>
               {item.tech.map(item => <li><span>{item}</span></li>)}

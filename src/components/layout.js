@@ -29,10 +29,11 @@ class Layout extends Component {
     <div>
      <GlobalStyle />
      <Head/>
-     { this.state.isLoading ?
-       (<Loader doneLoading={this.doneLoading}/>) :
-       (<ChildrenContainer className={"animate"}>{children}</ChildrenContainer>)
-     }
+     {/*{ this.state.isLoading ?*/}
+       {/*(<Loader doneLoading={this.doneLoading}/>) :*/}
+       {/*(<ChildrenContainer className={"animate"}>{children}</ChildrenContainer>)*/}
+     {/*}*/}
+     <ChildrenContainer className={"animate"}>{children}</ChildrenContainer>
     </div>
    )
  }
