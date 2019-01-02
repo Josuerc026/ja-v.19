@@ -70,7 +70,7 @@ const ProjectItem = styled.div`
    font-size: 1rem;
   }
   .bg-image{
-   height: 350px;
+   height: 150px;
    position: relative;
    background: url(${props => ( props.bgImage ? props.bgImage.childImageSharp.fluid.src : '' )}) no-repeat center center / cover;
    &:before{
@@ -84,6 +84,7 @@ const ProjectItem = styled.div`
    }
    @media (min-width: 768px){
      width: 75%;
+     height: 350px;
     } 
  }
 `;
