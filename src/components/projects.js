@@ -68,6 +68,10 @@ const ProjectItem = styled.div`
    width: 33.33%;
    font-weight: bold;
    font-size: 1rem;
+   
+   @media (min-width: 768px){
+    width: 25%;
+   }
   }
   .bg-image{
    height: 150px;
@@ -79,13 +83,14 @@ const ProjectItem = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
-    background: rgba(255,2,108,0.75);
+    background: rgba(255,2,108,0.65);
     
    }
    @media (min-width: 768px){
      width: 75%;
      height: 350px;
-    } 
+   }
+    
  }
 `;
 

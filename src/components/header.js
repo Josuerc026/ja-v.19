@@ -14,7 +14,7 @@ const HeaderContainer = styled.header`
  background: ${props => (props.adjust === 'up' && props.lastScroll !== 0 ?  'rgba(33, 33, 33,0.85)' : 'none' ) };
  transition: 0.4s all ease-in-out;
  padding: 15px 30px;
- z-index: 999;
+ z-index: 9999;
  
  .menu{
   display: flex;

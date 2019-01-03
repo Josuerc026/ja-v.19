@@ -13,7 +13,7 @@ const Title = styled.h2`
 
 const JobsInner = styled.div`
  position: relative;
- padding-left: 115px;
+ padding-left: 100px;
  &:before{
   content: '';
   width: 1.5px;
