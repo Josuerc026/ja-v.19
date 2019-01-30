@@ -4,8 +4,7 @@ description: 'Web Extension Application that lets Shenandoah University students
 image: './demo.png'
 url: 'https://chrome.google.com/webstore/detail/shenandoah-university-fac/jmhnihdcdejdfbfmhkmkckmopennehga'
 tech:
-    - HTML
+    - JavaScript
     - SCSS
-    - JS
     - PHP
 ---

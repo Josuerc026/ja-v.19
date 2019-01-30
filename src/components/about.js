@@ -36,7 +36,8 @@ const SkillsContainer = styled.div`
  padding: 35px 15px 15px 15px;
  
  @media (min-width: 768px){
-  width: 100%;
+  width: 75%;
+  margin: 0 auto;
  }
  
  &:before{

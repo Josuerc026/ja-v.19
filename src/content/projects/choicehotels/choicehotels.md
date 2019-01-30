@@ -6,7 +6,7 @@ url: 'https://careers.choicehotels.com'
 tech:
     - HTML
     - SCSS
-    - JS
+    - JavaScript
     - jQuery
     - PHP
     - WordPress

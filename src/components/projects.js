@@ -83,7 +83,7 @@ const ProjectItem = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
-    background: rgba(255,2,108,0.65);
+    background: rgba(255,2,108,0.75);
     
    }
    @media (min-width: 768px){
