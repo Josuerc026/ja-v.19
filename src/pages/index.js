@@ -31,7 +31,6 @@ export const query = graphql`
           name
           contactText
           url
-          _PARENT
         }
         html
       }
@@ -63,7 +62,7 @@ export const query = graphql`
           name
           start
           end
-        	title
+          title
           duties
         }
       }
