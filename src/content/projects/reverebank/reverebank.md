@@ -1,13 +1,10 @@
 ---
-name: 'Revere Bank'
-description: 'Revere bank official website redesign with heavy focus on ADA compliance'
-image: './www.reverebank.com_.png'
-url: 'https://reverebank.com'
+name: 'NIH NCATS Probes'
+description: 'National Center for Advancing Translational Sciences probe distribution website.'
+image: './probes-main.png'
+url: 'https://probes.ncats.nih.gov/'
 tech:
-    - HTML
-    - SCSS
     - JavaScript
-    - jQuery
     - PHP
     - WordPress
 ---

@@ -1,10 +1,9 @@
 ---
-name: 'CodeScience'
-description: 'Interactive web-based tool that helps SaaS businesses calculate their risk in making it in the AppExchange market.'
-image: './codescience.png'
-url: 'https://info.codescience.com/risk-calculator'
+name: 'OCR Global Trade Management'
+description: 'OCR Global Trade Management official website redesign with CRM Integration.'
+image: './ocr-home.png'
+url: 'https://www2.ocr-inc.com/'
 tech:
-    - JavaScript
     - HubSpot API
-    - Salesforce API
+    - WordPress
 ---

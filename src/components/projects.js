@@ -115,7 +115,7 @@ class Projects extends Component{
            <div className={"bg-image"}>
            </div>
            <div className={"content"}>
-             <h4><a href={item.url}>{item.name}</a></h4>
+             <h4><a href={item.url} target="_blank">{item.name}</a></h4>
              <p>{item.description}</p>
              <ul>
               {item.tech.map(item => <li><span>{item}</span></li>)}
